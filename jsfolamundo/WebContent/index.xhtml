@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>jsf na veia</title>
+</h:head>
+
+<h:body>
+
+	<h4>Agenda de Contatos</h4>
+	<br />
+
+
+	<h:form>
+		<br/>
+		<h:commandLink value ="Criar Contato" action="salvar_contato.jsf"/>
+		<br/>
+		<h:commandLink value="Atualizar Contato" action="atualizar_contato.jsf"/>
+		<br/>
+		<h:commandLink value="Remover Contato" action="remover_contatos.jsf"/>
+		<br/>
+		<br/>
+		<br/>
+		<h:commandLink value="Criar Aluno" action="criar_aluno.jsf"/>
+		<h:commandLink value="Listar Alunos" action="listar_aluno.jsf"/>
+		
+		
+		<h:dataTable value="#{contatoBean.listaDeContatos}" var="contato">
+			<h:column>
+				#{contato.nome}
+			</h:column>
+			<h:column>
+				#{contato.apelido}
+			</h:column>
+			<h:column>
+				#{contato.whattsApp}
+			</h:column>
+		</h:dataTable>
+		<br/>
+	</h:form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h:body>
+</html>
